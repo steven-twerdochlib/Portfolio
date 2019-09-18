@@ -1,0 +1,297 @@
+<html> 
+<head> 
+	<meta name="referrer" content="origin">
+    <title>Steven Twerdochlib's Portfolio</title>
+	<style>
+body {
+        background-image: url("Space Background.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-attachment: fixed;
+} 
+.dropbtn {
+    background-color: #320044;
+    color: gray;
+    padding: 0px;
+    border: none;
+	height: 30px; 
+	line-height: 30px;
+	margin:auto;
+	font-size: 30px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+	text-align: left;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #320044;
+	min-width: 250px;
+    z-index: 1;
+	height: 30px;
+}
+.dropdown-content a {
+	background-color: #320044;
+    color: gray;
+    padding: #px #px;
+    text-decoration: none;
+    display: block;
+	height: 30px; 
+	line-height: 30px;
+	font-size: 30px;
+}
+.dropdown-content a:hover {background-color: #5C007D; color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #5C007D; color: white;}
+html {
+  scroll-behavior: smooth;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#myImg:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+ 
+</style>
+</head>
+
+<body style="margin:0; padding:0;"> 
+<a name="topOfPage"></a>
+<h1 style="background-color: black; margin:auto; padding:0; color: white; width: 100%; height: 50px; line-height: 50px">
+	&ensp; Steven Twerdochlib's Portfolio
+</h1>
+
+<table style="background-color: #320044; margin:auto; padding:0; height: 30px; width: 100%; position: sticky; top:0; table-layout:fixed">
+	<tr>
+		<th style="text-align: right">
+			<div class="dropdown">
+				<button class="dropbtn" onclick="location.href='#topOfPage'" type="button"><b>Home</b></button>
+			<div class="dropdown-content">
+			
+			<a href="#introWebsiteTitle"><b>Introduction to the Website </b></a>
+			<a href="#introStevenTitle"><b>Introduction&nbspto&nbspSteven&nbspTwerdochlib </b></a>
+			</div>
+			</div>
+		</th>
+		<th style="text-align: center">
+			<div class="dropdown">
+				<button class="dropbtn" onclick="location.href='#ProjectsPage'" type="button"><b>Projects</b></button>
+			<div class="dropdown-content">
+			<a href="#WebPageProject"><b>Portfolio Web Page</b></a>
+			</div>
+			</div>
+		</th>
+		<th style="text-align: left">
+			<div class="dropdown">
+				<button class="dropbtn" onclick="location.href='#ContactPage'" type="button"><b>Contact</b></button>
+			</div>
+		</th>
+	</tr>
+</table>
+
+<p style="line-height: 50px"> <br></p>
+<table style="margin:auto; padding:0; height: auto; width: 100%; white-space:nowrap;">
+
+<a name="introWebsiteTitle"></a>
+	<tr>
+		<p style="line-height: 50px"> <br></p>
+	</tr>
+	<tr style="text-align: center">
+		<h1 style="background-color: transparent; text-align: center; margin:auto; padding:0; color: white; font-size: 60px; height: auto; line-height: 80px">
+				Introduction to the Website
+		</h1>
+	</tr>
+	<tr>
+		<p style="line-height: 50px"> <br></p>
+	</tr>
+	<tr style="text-align: center">
+		<h1 style="background-color: transparent; text-align: center; margin:auto; padding:0; color: white; height: auto; line-height: 40px; width: 50%;">
+				This website has been created to showcase my portfolio of projects that I have worked or collaborated on. You will also find personal information regarding myself and my ambitions for the future.
+		</h1>
+	</tr>
+	
+<a name="introStevenTitle"></a>
+	<tr>
+		<p style="line-height: 50px"> <br></p>
+	</tr>
+	<tr style="text-align: center">
+		<h1 style="background-color: transparent; text-align: center; margin:auto; padding:0; color: white; font-size: 60px;height: auto; line-height: 80px">
+				Introduction to Steven Twerdochlib
+		</h1>
+	</tr>
+	<tr>
+		<p style="line-height: 50px"> <br></p>
+	</tr>
+	<tr style="text-align: center">
+		<h1 style="background-color: transparent; text-align: center; margin:auto; padding:0; color: white; height: auto; line-height: 40px; width: 50%;">
+				I am an enthusiastic and driven 3rd year university student currently studying a Bsc Computer Science course at Aberystwyth University, where I am expecting a first in my degree scheme. I am now seeking to further my knowledge and experience of programming with an actual job enviroment, specifically around games, as it has always been a dream of mine to one day create a whole world of wonders for other people to explore. 
+		</h1>
+	</tr>
+</table>
+
+<a name="ProjectsPage"></a>
+<p style="line-height: 50px"> <br></p>
+<h1 style="text-align: center; margin:auto; padding:0; color: white; font-size: 60px; height: auto; line-height: 80px">Projects</h1>
+
+
+<a name="WebPageProject"></a>
+<p style="line-height: 50px"> <br></p>
+<table style="align: center; margin:auto; padding:0; height: auto; width: 75%; table-layout: fixed;">
+	<tr style="color: white; font-size: 50px;">
+		<td style="width: 30%; color: white; font-size: 50px;">Project Name:&ensp;</td>
+		<td style="color: white; font-size: 50px; padding:0 15px 0 15px;">Portfolio Web Page Project</td>
+	</tr>
+	<tr style="color: white; font-size: 50px;">
+		<td rowspan="4"><img style="max-width: 100%; max-height: 100%">
+		<img id="myImg" src="Portfolio.png" alt="Portfolio Website" style="width:100%;max-width:300px">
+	<!--
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+		</div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+			modal.style.display = "none";
+		}
+	</script>
+	</td>
+		<td style="color: white; font-size: 20px; padding:0 15px 0 15px;"><b>Description:</b></td>
+	</tr>
+	<tr>
+		<td style="color: white; padding:0 15px 0 15px;">The aim of this project was to create a website that would be able to display clearly all the projects that have been made by or in collaboration with Steven Twerdochlib. The other aim of this project was to show the skill Steven has in HTML, CSS and JavaScript, as well as, his documentation, development, learning skills, etc... This project was created using GitHub as a web service and the code was written using Notepad++, also a website called formspree was used for creating the emailing feature.</td></td>
+	</tr>
+	<tr>
+		<td style="color: white; padding:0 15px 0 15px; font-size: 20px;"><b>Downloadable Files/Links (if applicable)</b></td>
+	</tr>
+	<tr>
+		<td style="color: white; padding:0 15px 0 15px;">
+			<a href="Requirement Spec.pdf" style="color: white; padding:0 15px 0 15px;" download>Requirement Document PDF</a>
+			<br />
+			<a href="UI Spec.pdf" style="color: white; padding:0 15px 0 15px;" download>UI Document PDF</a>
+			<br />
+			<a href="Images.zip" style="color: white; padding:0 15px 0 15px;" download>Images Used ZIP File</a>
+		</td>
+	</tr>
+</table>
+
+<a name="ContactPage"></a>
+<p style="line-height: 50px"> <br></p>
+<h1 style="text-align: center; margin:auto; padding:0; color: white; font-size: 60px; height: auto; line-height: 80px">Contact</h1>
+<p style="line-height: 50px"> <br></p>
+
+<table style="align: center; margin:auto; padding:0; height: auto; width: 35%; table-layout: fixed;">
+	<tr>
+		<td style="color: white; font-size: 20px; padding:0 15px 0 15px; font-size: 20px;"><b>Telephone No.:</b></td>
+		<td style="color: white; font-size: 20px; padding:0 15px 0 15px; font-size: 20px;"><b>Email:</b></td>
+	</tr>
+	<tr>
+		<td style="color: white; font-size: 20px; padding:0 15px 0 15px; font-size: 20px;"><b>077 5169 9070</b></td>
+		<td style="color: white; font-size: 20px; padding:0 15px 0 15px; font-size: 20px;"><b>steven.twerdochlib@gmail.com</b></td>
+	</tr>
+</table>
+
+<p style="line-height: 50px"> <br></p>
+
+<h1 style="text-align: center; color: white; font-size: 50px;">Email Steven Twerdochlib Now?</h1>
+
+<p style="line-height: 50px"> <br></p>
+
+<form style="max-width:500px;margin:auto; text-align: center" method="POST" action="http://formspree.io/steven.twerdochlib@gmail.com">
+  <input style="width: 100%; overflow: auto; font-size:16px; min-height: 30px;" type="email" name="email" placeholder="Your email">
+  <input type="hidden" name="_next" value="https://steven-twerdochlib.github.io/Portfolio/"/>
+	<br>
+  <br>
+  <textarea id="textarea" style="width: 100%; resize: vertical; overflow: auto; font-size:16px; min-height: 200px;" name="message" placeholder="Your message"></textarea>
+  <script>$('textarea').autoResize();</script>
+  <br>
+  <br>
+  <button style="width: 25%; font-size:40px;" type="submit">Send</button>
+</form>
+
+<p style="line-height: 50px"> <br></p>
+	
+</body> 
+</html> 
