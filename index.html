@@ -9,7 +9,6 @@ body {
 		background-size: 100% 100%;
 		background-attachment: fixed;
 } 
-
 .dropbtn {
     background-color: #320044;
     color: gray;
@@ -20,13 +19,11 @@ body {
 	margin:auto;
 	font-size: 30px;
 }
-
 .dropdown {
     position: relative;
     display: inline-block;
 	text-align: left;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -35,7 +32,6 @@ body {
     z-index: 1;
 	height: 30px;
 }
-
 .dropdown-content a {
 	background-color: #320044;
     color: gray;
@@ -46,23 +42,18 @@ body {
 	line-height: 30px;
 	font-size: 30px;
 }
-
 .dropdown-content a:hover {background-color: #5C007D; color: white;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #5C007D; color: white;}
-
 html {
   scroll-behavior: smooth;
 }
-
 #myImg {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
-
 #myImg:hover {opacity: 0.7;}
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -77,7 +68,6 @@ html {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
-
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
@@ -85,7 +75,6 @@ html {
   width: 80%;
   max-width: 700px;
 }
-
 /* Caption of Modal Image */
 #caption {
   margin: auto;
@@ -97,7 +86,6 @@ html {
   padding: 10px 0;
   height: 150px;
 }
-
 /* Add Animation */
 .modal-content, #caption {  
   -webkit-animation-name: zoom;
@@ -105,17 +93,14 @@ html {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)} 
   to {-webkit-transform:scale(1)}
 }
-
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
-
 /* The Close Button */
 .close {
   position: absolute;
@@ -126,7 +111,6 @@ html {
   font-weight: bold;
   transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
   color: #bbb;
@@ -161,6 +145,11 @@ html {
 			<div class="dropdown-content">
 			<a href="#WebPageProject"><b>Portfolio Web Page</b></a>
 			</div>
+			</div>
+		</th>
+		<th style="text-align: center">
+			<div class="dropdown">
+				<button class="dropbtn" onclick="location.href='#TutorialsPage'" type="button"><b>Tutorials</b></button>
 			</div>
 		</th>
 		<th style="text-align: left">
@@ -237,7 +226,6 @@ html {
 	<script>
 		// Get the modal
 		var modal = document.getElementById("myModal");
-
 		// Get the image and insert it inside the modal - use its "alt" text as a caption
 		var img = document.getElementById("myImg");
 		var modalImg = document.getElementById("img01");
@@ -247,10 +235,8 @@ html {
 			modalImg.src = this.src;
 			captionText.innerHTML = this.alt;
 		}
-
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
-
 		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() { 
 			modal.style.display = "none";
@@ -271,11 +257,60 @@ html {
 			<br />
 			<a href="UI Spec.pdf" style="color: white; padding:0 15px 0 15px;" download>UI Document PDF</a>
 			<br />
-			<a href="Maintenance Doc.pdf" style="color: white; padding:0 15px 0 15px;" download>Maintenance Document PDF</a>
-			<br />
-			<a href="Code.txt" style="color: white; padding:0 15px 0 15px;" download>Code Text File</a>
-			<br />
 			<a href="Images.zip" style="color: white; padding:0 15px 0 15px;" download>Images Used ZIP File</a>
+		</td>
+	</tr>
+</table>
+
+<a name="TutorialsPage"></a>
+<p style="line-height: 50px"> <br></p>
+<table style="align: center; margin:auto; padding:0; height: auto; width: 75%; table-layout: fixed;">
+	<tr style="color: white; font-size: 50px;">
+		<td style="width: 30%; color: white; font-size: 50px;">Tutorial Name:&ensp;</td>
+		<td style="color: white; font-size: 50px; padding:0 15px 0 15px;"></td>
+	</tr>
+	<tr style="color: white; font-size: 50px;">
+		<td rowspan="4"><img style="max-width: 100%; max-height: 100%">
+		<img id="myImg" src="Portfolio.png" alt="Portfolio Website" style="width:100%;max-width:300px">
+	<!--
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+		</div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+			modal.style.display = "none";
+		}
+	</script>
+	</td>
+		<td style="color: white; font-size: 20px; padding:0 15px 0 15px;"><b>Tutorial Link + Description:</b></td>
+	</tr>
+	<tr>
+		<td style="color: white; padding:0 15px 0 15px;"></td></td>
+	</tr>
+	<tr>
+		<td style="color: white; padding:0 15px 0 15px; font-size: 20px;"><b>Downloadable Files (if applicable)</b></td>
+	</tr>
+	<tr>
+		<td style="color: white; padding:0 15px 0 15px;">
+
 		</td>
 	</tr>
 </table>
