@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F45EEA7B-C634-2AA5-02CA-D6B7F9CECF72}") = "Computing Coursework Version 10 Superpowers", "Assembly-CSharp.csproj", "{81F04F1A-146E-CE97-65A2-907C18E704B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81F04F1A-146E-CE97-65A2-907C18E704B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F04F1A-146E-CE97-65A2-907C18E704B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F04F1A-146E-CE97-65A2-907C18E704B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F04F1A-146E-CE97-65A2-907C18E704B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

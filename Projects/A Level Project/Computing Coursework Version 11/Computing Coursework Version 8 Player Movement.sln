@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{931D1B5A-8BC8-8778-EF23-0098C7957084}") = "Computing Coursework Version 8 Player Movement", "Assembly-CSharp.csproj", "{359531B7-7D3D-D230-31FF-E55E21A4305C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{359531B7-7D3D-D230-31FF-E55E21A4305C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359531B7-7D3D-D230-31FF-E55E21A4305C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359531B7-7D3D-D230-31FF-E55E21A4305C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359531B7-7D3D-D230-31FF-E55E21A4305C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

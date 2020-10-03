@@ -1,0 +1,210 @@
+ \documentclass{project}
+\usepackage[pdfauthor={N. W. Hardy},pdftitle={Software Engineering Group Project, LaTeX Document Example},pdftex]{hyperref}
+ \usepackage{longtable}
+ \begin{document}
+ \title{Group 12 Software Engineering Group Project}
+ \subtitle{System Tests Specification}
+ \author{S MW Twerdochlib \& J M Dunn}     
+ \shorttitle{Group 12 Test Spec}
+ \version{1}
+ \status{Release}
+ \date{2019-27-02}
+ \configref{SE.12.TS}
+ \maketitle
+
+ \tableofcontents
+
+ \newpage
+
+ \section{INTRODUCTION}
+ \subsection {Purpose}
+The purpose of this document is to provide a series of system tests that reliably tests the major functionalities of the desktop and mobile systems, once a complete system has been made for both. 
+
+ \subsection {Scope}
+This document specifies the system tests that are to be carried out once a complete system has been made for either the desktop program or the mobile program. It indicates multiple tests, their input, their expected outputs and pass criteria.
+This document should be read by the person in charge of testing the complete systems and providing a test report.
+
+ \subsection {Objectives}
+To provide detailed system tests that can be used on the desktop and mobile systems with given pass criteria to show what is required to pass/fail each test.
+
+\section{DESKTOP SYSTEM TESTS}
+ \begin{center}
+  \begin{longtable}[c]{| p{1.6cm} | p{1cm} | p{3.5cm} |p{3.3cm} | p{3.3cm} | p{3.0cm} |}
+  \caption{Desktop System Tests.\label{long}}\\
+ 
+  \hline
+  Test Ref & Req being tested & Test Content & Input & Output & Pass Criteria\\
+  \hline
+  \endfirsthead
+  
+ \hline
+ \multicolumn{6}{|c|}{Continuation}\\
+ \hline
+ Test Ref & Req being tested & Test Content & Input & Output & Pass Criteria\\
+ \hline
+ \endhead
+ 
+ \hline
+ \multicolumn{6}{|c|}{Continues on next page}\\ 
+ \hline
+ \endfoot
+  
+  \hline
+  \multicolumn{6}{| c |}{End of Table}\\
+  \hline\hline
+  \endlastfoot
+  
+ \hline
+ SE-F-001 & FRD1 & When the software starts, it should display a start screen, and give the list creator the choice of starting a new pub list, or restoring a past pub list. & The software is started. & A screen appears that has the option to start a new pub list or restore a past pub list. & A screen appears that has at least two user interface input objects. \\
+ \hline
+ SE-F-002 & FRD2 & The user chooses to start a new pub list. &The user uses the user interface input object that should allow the user to start a new pub list (found on the start screen). &An input textbox becomes available that allows the user to input the name of the town.  &A user interface input textbox becomes available for the user. \\
+ \hline
+ SE-F-003 &FRD2 &If the list creator chooses to start a new pub list, then the software will ask for the name of the town, and will be ready to accept new pubs. &The user inputs the name of a town. &The input from the user should be stored as the town name for the new pub list. &The user input is stored correctly. \\
+ \hline
+ SE-F-004 &FRD3 & If the list creator chooses to restoring a past pub list, then they should be given a choice of past lists to load. &The user uses the user interface input object that should allow the user to restore a past pub list (found on the start screen). &An input user interface object becomes available that allows the user to select a past pub list. &The user can select a past pub list. \\
+ \hline
+ SE-F-005&FRD3 &Having selected the first past pub list, it should be loaded, and the pubs that have already been created should be displayed. &The first past pub list is selected. &The first past pub list is now displayed, showing all the pubs that were in it. &The first past list of pubs is displayed correctly. \\
+ \hline
+ SE-F-006 &FRD3 & Having selected the last past pub list, it should be loaded, and the pubs that have already been created should be displayed.&The last past pub list is selected. &The last past pub list is now displayed, showing all the pubs that were in it. &The last past list of pubs is displayed correctly. \\
+ \hline
+ SE-F-007 &FRD3 & Having selected the middle past pub list, it should be loaded, and the pubs that have already been created should be displayed.&The middle past pub list is selected. &The middle past pub list is now displayed, showing all the pubs that were in it. &The middle past list of pubs is displayed correctly. \\
+ \hline
+ SE-F-008&FRD4 &It should be possible to delete a pub from the list of pubs. &Clicks the ‘X’ next to the first pub name that is in the loaded pub list. &The previously first pub should no longer be in the list. And displayed accordingly. &The pub list should no longer display the previously first pub. \\
+ \hline
+ SE-F-009 & FRD4& It should be possible to delete a pub from the list of pubs.& Clicks the ‘X’ next to the last pub name that is in the loaded pub list.&The previously last pub should no longer be in the list. And displayed accordingly. &The pub list should no longer display the previously last pub. \\
+ \hline
+ SE-F-010 &FRD4 &It should be possible to delete a pub from the list of pubs. &Clicks the ‘X’ next to the middle pub name that is in the loaded pub list.&The previously middle pub should no longer be in the list. And displayed accordingly. &The pub list should no longer display the previously middle pub. \\
+ \hline
+ SE-F-011 &FRD5 &It should be prevent the user from adding a pub to the list of pubs with the same name as a pub already in the list. &A pub’s details are inputted with a pub name that is already in the pub list. &An error should be displayed telling the user that a pub with the same name has already been added to the pub list.  &Error message is displayed. \\
+ \hline
+ SE-F-012 &FRD5 &It should be possible to add a pub to the list of pubs &Input pub details of a pub not already in the pub list. & The new pub details should be added to the pub list.&The pub details are stored and displayed correctly. \\
+ \hline
+ SE-F-013 &FRD5 &It should be prevent the user from adding a pub to the list of pubs without a pub name inputted. &Input pub details except the pub name. &An error should be displayed saying that a pub name is required. &Error message is displayed. \\
+ \hline
+ SE-F-014 &FRD5 &It should allow the user to not input any description of a pub. &Input pub details except the pub description. &A pub is added with an empty description. &A pub is added with an empty description. \\
+ \hline
+ SE-F-015 &FRD5 &It should allow the user to not input any GPS location for a pub. &Input pub details except the GPS location. &A pub is added without a GPS location. &A pub is added with an empty GPS location. \\
+ \hline
+ SE-F-016 &FRD5 & It should prevent the user from adding a pub without at least one photo.&Input pub details except a photo. & An error should be displayed saying that a pub photo is required.&Error message is displayed. \\
+ \hline
+ SE-F-017 &FRD5 &It should allow the user to not input any characteristics for a pub.& Input pub details except a list of characteristics.& A pub is added without a list of characteristics.&A pub is added without a list of characteristics. \\
+ \hline
+ SE-F-018 &FRD5 &It should only display 1 error message if both a photo and a pub name aren’t inputted when adding a pub. & Input pub details except a pub name and a photo.& A single error message is displayed saying that both fields are required.&A single error message is displayed. \\
+ \hline
+ SE-F-019 &FRD5 &It should prevent files that aren’t image files from being inputted when adding a pub. &Input a non-image file into a pubs photo input field. &An error message should display saying it’s not a valid input type. &An error message is shown. \\
+ \hline
+ SE-F-020 &FRD5 &It should prevent images that are too big from being inputted in the pubs photos input field. &Input an image file into a pubs photo input field that is larger than allowed. &An error message should display saying it’s not a valid input type. &An error message is shown. \\
+ \hline
+ SE-F-021 &FRD8 & It should be possible to select the first existing pub for editing its details.&Select the first pub. &The first pubs contents are displayed as when the user finished inputting the pub details when adding the pub. &The first contents are displayed as when the user finished inputting the pub details when adding the pub. \\
+ \hline
+ SE-F-022 &FRD8 &It should be possible to select the last existing pub for editing its details. &Select the last pub. &The last pubs contents are displayed as when the user finished inputting the pub details when adding the pub. &The last pubs contents are displayed as when the user finished inputting the pub details when adding the pub. \\
+ \hline
+ SE-F-023 &FRD8 &It should update the first pub in the list with new details after editing. &Input new pub details for each field as desired/expected. &The firsts pub in the pub list has new pub details which are the same as what the user inputted for editing. &The first pubs details have been correctly changed. \\
+ \hline
+ SE-F-024 &FRD8 &It should update the last pub in the list with new details after editing. & Input new pub details for each field as desired/expected.&The lasts pub in the pub list has new pub details which are the same as what the user inputted for editing. &The lasts pubs details have been correctly changed. \\
+ \hline
+ SE-F-025 &FRD6 &It should be possible to save a changed/new pub list. &Click the save changes button. & It should display a notification saying the list has been saved and the list should now be an option after clicking the restore a past pub list button found on the start screen.&The list should now be an option after clicking the restore a past pub list button found on the start screen. \\
+ \hline
+ SE-F-026& FRD6&It should be possible to cancel a changed/new pub list. &Click the cancel changes button. &It should display a notification saying the list has been cancelled and the list should now be the same as when the app first started running. &The list should now be the same as when the app first started running. \\
+ \hline
+ SE-F-027 &FRD7 &The list creator chooses to package all of the details of a pub list so that they can be displayed in a mobile system. &The user chooses to package all the details of a pub list. &The details of a pub list should be packaged so that they can be displayed in a mobile system. &The details of a pub list should be packaged so that they can be displayed in a mobile system. \\
+  \end{longtable}
+ \end{center}
+ \clearpage
+ 
+\section {MOBILE SYSTEM TESTS}
+ \begin{center}
+  \begin{longtable}[c]{| p{1.6cm} | p{1cm} | p{3.5cm} |p{3.3cm} | p{3.3cm} | p{3.0cm} |}
+  \caption{Mobile System Tests.\label{longg}}\\
+ 
+  \hline
+  Test Ref & Req being tested & Test Content & Input & Output & Pass Criteria\\
+  \hline
+  \endfirsthead
+  
+ \hline
+ \multicolumn{6}{|c|}{Continuation}\\
+ \hline
+ Test Ref & Req being tested & Test Content & Input & Output & Pass Criteria\\
+ \hline
+ \endhead
+ 
+ \hline
+ \multicolumn{6}{|c|}{Continues on next page}\\ 
+ \hline
+ \endfoot
+  
+  \hline
+  \multicolumn{6}{| c |}{End of Table}\\
+  \hline\hline
+  \endlastfoot
+  
+ \hline
+ SE-F-001 & FRM1 & When the mobile system starts, it should either display a list of pubs in a sensible order, or a list of pub lists that can be loaded. & The software is started. & The screen should display one of the two options. & Either of the options are displayed successfully. \\
+ \hline
+ SE-F-002 & FRM1 & If the user is shown a list of pub lists, then they should be able to choose one, and would then have a list of pubs displayed. & The user clicks on a pub list. & The list of pubs in that list is displayed. & The correct list pubs for that specific list is displayed when the user clicks on it. \\
+ \hline
+ SE-F-003 & FRM2 & When a list of pubs is shown, the user should be able to filter that list. The program can be told to display the pubs which conform to any of the filters. &The user enters a criteria to filter the list.  & The pubs which conform to any of the filter constraints are displayed. &The pubs that are displayed after the filter obey any of the filter constraints.  \\
+ \hline
+ SE-F-004 & FRM2 & When a list of pubs is shown, the user should be able to filter that list. The program can be told to display only those pubs which obey ALL of the filter constraints. & The user enters a criteria to filter the list. &The pubs which conform to ALL of the filter constraints are displayed.  &The pubs that are displayed after the filter obey ALL of the filter constraints.  \\
+ \hline
+ SE-F-005 & FRM4 & The user should be able to remove a filter once it has been applied. & The user should click on a button which removes the filter from the list. & The list should return to the state it was in before the filter was applied. &The list displayed after the filter was removed should display either the whole list, or the list that complies with any previous filters applied.  \\
+ \hline
+ SE-F-006 & FRM3 & When a list of pubs is shown, the user should be able to select one of the pubs, and be shown all of its details. & The user clicks on one of the pubs. & All of the details of that pub should be displayed, including its photograph, the location on a map, and the review. & All of the correct details for the specific pub should be displayed. \\
+ \hline
+ SE-F-007 & FRM4 &The user should be able to generate a random list of pubs from another list. Only pubs from that list should be returned.  &The user should decide which list to use, and select any filters they would like to apply to the list.  &A list of random pubs should be generated and displayed, and it should obey the filter rules if a filter was applied.  &The list should include pubs from the whole list, or those which obey the filter rules. No pubs from other lists should be displayed.  \\
+ \hline
+ SE-F-008 & FRM4 &A tick box should be displayed, which allows the user to indicate that they have visited a pub.  &The user clicks on the tick box.  &The next pub in the list should be displayed. &After the user has clicked on the tick box, the next pub is displayed.  \\
+ \hline
+ SE-F-009 & FRM4 &When the user clicks on the tick box on the last pub, a congratulatory screen is shown. Then after a certain amount of time, the user is returned to the home screen. The list of pubs is shown.  &The user clicks on the tick box.  &A congratulatory screen is displayed for a certain amount of time, and then the home screen is displayed with the list of pubs.  &The congratulatory screen is displayed for a specified amount of time, and then the home screen is displayed with the list of pubs.  \\
+ \hline
+ SE-F-010 & N/A & The user should be able to stop the crawl early. &The user clicks on the ‘End crawl early’ button.  &The home screen is displayed.  &The crawl is ended and the home screen is displayed.  \\
+ \hline
+ SE-F-011 & FRM5 &The user should be able to make an ordered list of pubs from the full list.  &The user selects all of the pubs in the list.  &A confirm screen should be displayed. A pub crawl is then created with that list.  &A pub crawl is created with the pubs included in the list.  \\
+ \hline
+ SE-F-012 & FRM5 &The user should be able to make an ordered list of pubs from a filtered list.  &The user filters a list of pubs, and then selects the pubs they want to include in the crawl.  &A confirm screen should be displayed. A pub crawl is then created with that  filtered list.  &A pub crawl is created with the pubs included in the filtered list.  \\
+ \hline
+ SE-F-013 & FRM5 &The user should be able to put times against each pub.  &The user selects the time.  &The list should be displayed, with the time against each pub which has been given a time.  &The pub is designated the correct time as chosen by the user. \\
+ \hline
+ SE-F-014 & FRM5 &The pub crawl is ordered by the time assigned to each pub.  &The user selects the times for each pub when creating the crawl.  &A list should be created with the selected pubs, and be ordered by the times given to each pub.  &The pubs in the crawl should be ordered by the times.  \\
+ \hline
+ SE-F-015 & FRM5 &Having completed the list, they should be able to show the first pub and its time.  &The user clicks on the first pub.  &The first pub in the list should be shown.  &The first pub should be shown, along with its time.  \\
+ \hline
+ SE-F-016 & FRM5 &There should be a tick box which allows the user to indicate that they have visited a pub. &The user clicks on the tick box. &The second pub and its associated time should be displayed.  &The second pub and its associated time should be displayed.  \\
+ \hline
+ SE-F-0017 & FRM5 &When the user clicks the tick box on the last pub, a congratulatory screen should pop up, and the home screen showing the list of pubs is displayed.  &The user clicks the tick box on the last pub.  &A congratulatory screen should pop up, and the home screen showing the list of pubs is displayed.  &The crawl ends, the congratulatory screen pops up, and the user is returned to the home screen and the list of pubs id displayed.  \\
+ \hline
+ SE-F-0018 & FRM5 & The user should be able to stop the crawl early. &The user clicks on the ‘End crawl early’ button.  &The home screen is displayed.  &The crawl is ended and the home screen is displayed.  \\
+ \hline
+ SE-F-0019 & N/A &The user should be able to ‘favourite’ a pub from a list.  &The user clicks on the ‘heart’ button.  &A heart appears next to the pub in that list that has been favorited.  &A heart should appear next to the pub which has been favorited.  \\
+  \end{longtable}
+ \end{center}
+ \clearpage
+ \phantomsection
+ \addcontentsline{toc}{section}{REFERENCES}
+ \begin{thebibliography}{5}
+ \bibitem{se.qa.01} \emph{Software Engineering Group Projects}
+ Quality Assurance Plan
+ C. J. Price, SE.QA.01. 2.1 Release.
+ \bibitem{se.qa.02} \emph{Software Engineering Group Projects}
+ General Documentation Standards
+ C. J. Price, SE.QA.02. 2.1 Release.
+ \bibitem{se.qa.06} \emph{Software Engineering Group Projects}
+ Test Procedure Standards
+ C. J. Price, SE.QA.06. 2.0 Release.
+ \bibitem{se.qa.08} \emph{Software Engineering Group Projects}
+ Operating Procedures and Configuration Management Standards
+ C. J. Price, SE.QA.08. 2.3 Release.
+ \end{thebibliography}
+\phantomsection
+ \addcontentsline{toc}{section}{DOCUMENT HISTORY}
+ \section*{DOCUMENT HISTORY}
+ \begin{tabular}{|l | l | l | l | l |}
+ \hline
+ Version & CCF No. & Date & Changes made to Document & Changed by \\
+ \hline
+ 1 & SE.12.TS & 2019-03-03 & Initial creation \& finalisation for release & stt31 \& jod45\\
+ \hline
+ \end{tabular}
+ \label{thelastpage}
+ \end{document}

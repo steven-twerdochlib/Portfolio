@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Group Project</string>
+    <string name="title_activity_list_of_pubs">ListOfPubs</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_listofpubs">List Of Pubs</string>
+    <string name="title_activity_add_to_pub_crawl">AddToPubCrawl</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_random_pub_crawl">random_pub_crawl</string>
+    <string name="title_activity_pub_crawl_list">PubCrawlList</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

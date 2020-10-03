@@ -1,0 +1,158 @@
+\documentclass{project}
+\usepackage[pdfauthor={N. W. Hardy},pdftitle={Software Engineering Group Project, LaTeX Document Example},pdftex]{hyperref}
+\begin{document}
+\title{Group 12 Software Engineering Group Project}
+\subtitle{Maintenance Manual Documentation} 
+\author{E Kalisiak, S MW Twerdochlib \& J Kus}     
+\shorttitle{LaTeX}
+\version{1}
+\status{Release}
+\date{7th May 2019}
+\configref{SE.12.MD}
+\maketitle
+\tableofcontents
+\newpage
+\section{INTRODUCTION}
+\subsection{Purpose of this document.}
+The goal of this document is to answer all of the specific questions that installers or maintainers of the software can have.
+
+\subsection{Scope}
+The project maintenance manual document describes the program, its structure and algorithms used in it. It includes an information about interfaces, suggestions for improvements and things to watch when making changes. It mentions physical limitations of the program, a way of rebuilding and testing the software.
+
+\subsection{Objectives}
+The objectives of this document are: 
+\begin{itemize}
+\item Program description.
+\item Program structure.
+\item Algorithms.
+\item The main data area.
+\item Files.
+\item Interfaces.
+\item Suggestions for improvement.
+\item Things to watch for when making changes.
+\item Physical limitations of the program.
+\item Rebuilding and testing.
+\end{itemize}
+
+\section{DESKTOP}
+\subsection{Program Description}
+Program allows user to enter new pub’s information and update existing ones. The interaction between human and computer happens due to user interface coded in JavaFx. Data is stored in MySql server, images are stored on imagur.com. 
+
+\subsection{Program Structure}
+\subsubsection{See [1] section 2.2.1 and 2.2.3 for a list of classes with a description.}
+subsubsection{See [1] section 5.1 for a list of methods with description.}
+
+\subsection{Algorithms}
+\textit{loadFromDatabase(String townName)} Loads pub list from database.\par
+\textit{deletePub(Pub pub2delete, String town)} Deletes pub from database.\par
+\textit{processResults()} Converts user input into pub object.\par
+\textit{processEditResults()} Converts user input in order to update pub object.\par
+\textit{showFileChooser()} Allows user to choose images to be added to the pub object.\par
+\textit{invalidInputProperty()} Checks user input if it is valid to create pub object.\par
+\textit{showEditPubDialog()} Shows Dialog pane to allow user to insert pub’s information.\par
+\textit{initialize()} method from \textit{EditAndDeleteController} Update user interface window to show proper information while user edit/add/delete pubs.\par
+\textit{upload(File file)} Uploads image to database.\par
+
+
+\subsection{The Main Data Area}
+Pub object has been used to store data for a single pub. PubList object has been used to store all the pubs available to the program at current time. 
+
+\subsection{Files}
+Program uses two external libraries to set graphics and mysql-connector-java-8.0.15 to connect to database. These files may need to be updated or become deprecated, but they should not need to be actively changed or worked on to add features. 
+
+\subsection{Interfaces}
+Having no access to the Internet does enable running the program but it makes impossible to connect to database and so program does not download or upload any kind of data. 
+
+\subsection{Suggestions For Improvements}
+Making the user interface window resizable.\par
+Adding feature to delete image from pub object. \par
+After clicking “save” button, program shows enter screen and allows user to use it again.\par
+
+\subsection{Things Wo Watch When Making Changes}
+When adding a new component to any of .fxml files, check the layout created by that file (e.g. check if components do not stack one on the other).\par
+Adding or deleting pub’s characteristics will require to update .fxml files and methods which process the user’s input.\par
+
+\subsection{Physical Limitations Of The Program}
+The compiler must run at least Java 1.8 version. 
+
+\subsection{Rebuilding And Testing}
+All files have been saved in \textit{SEgrp12DesktopApp} file.\par
+To rebuild a system standard procedure for rebuilding the system should be followed.\par
+When the program has completed running the tests the Run window will be opened and the information about passed and unpassed tests will be shown. 
+
+
+\section{MOBILE}
+\subsection{Program Description}
+A mobile application to provide a user with information about pubs in different towns and allows the user to create both planned and random pub crawls.
+
+\subsection{Program Structure}
+\subsubsection{List of modules.}
+See [1] section 2.2.2 and 2.2.4 for a list of methods with a description.
+
+\subsubsection{List of methods}
+See [1] section 5.2 for a list of methods with a description. 
+
+\subsection{Algorithms}
+\textit{linkToDatabase} Links to database.\par
+\textit{createLayoutDynamically} Programmatically creates a layout based on variables, e.g. numbers of buttons.\par
+\textit{sortListByTimes} Sorts the list of pubs by time assigned to it.\par
+\textit{onButtonShowPopupWindowClick} Creates a popup window.\par
+\textit{onKeyDown} Goes back to the previous screen while changing variables appriopriately.\par
+\textit{goToListOfPubs} It sorts the filteredListOfPubs to contain the desired pubs and changes the screen to the listOfPubs screen.\par
+\textit{onNavigationItemSelected} Detects when a list item in navigation bar has been clicked and proceed to take appropriate actions.\par
+\textit{onMapReady} Displays the pub coordinates appropriately.\par
+\textit{DownloadImageFromInternet} Downloads the image from the Internet.\par
+\textit{isNetworkAvailable} Checks whether there is an access to the Internet.\par
+\textit{onCreate} Creates an activity and all of its components.\par
+\textit{onCheckboxClicked} Checks if the checkbox is ticked and proceeds to take an appriopriate action.\par
+\textit{addPub} Adds pub to the list of pubs in a Town object.
+
+\subsection{The Main Data Area}
+We have created ArrayLists to store a list of towns \textit{ListOfTowns}, lists of pubs included in a crawl \textit{PubCrawlList} and created a List of filtered pubs \textit{PubFileteredList}. We have used objects such as: Pubs \textit{currentPub} for the pub being looked up, \textit{currentTown}- the town being looked up, \textit{Pub}- for all the information regarding a pub and Town \textit{Town}- all the information regarding a town.\par
+
+\subsection{Files}
+The application doesn't require access to any files.
+
+\subsection{Interfaces}
+Having no acces to the Interent does enable running the program, but it makes it impossible to connect to the database and so it doesn't get the pubs and towns information.\par
+
+\subsection{Suggestions For Improvements}
+Adding a pop up window when the program starts to inform the user whether there is no internet access. \par
+Creating a limit to the size of the textView and buttons for pub/towns names and make it scrollable.\par
+Improving the layout of the program for the \textit{filteredPub} activity. \par
+While starting a random pub crawl with the fileteredList being empty, display the error message asking the user to change filters instead of asking for inserting a greater number.\par
+While starting an ordered pub crawl with the fileteredList being empty, display the error message asking the user to change filters instead of letting the user to go to the next addToPubCrawl activity.\par
+Allow searching through a list of towns to take into account the number of equal letters from the whole word e.g. berystwyth search would display Aberystwyth before Borth. \par
+Get the phone local time and use that to check off pubs in the ordered pub crawl.\par
+Adding a possibility to assign a time to a random pub. \par
+
+\subsection{Things To Watch For When Making Changes}
+When adding a new filter option, the areas which have to be changed include the \textit{linkToDatabase} function in the main class, \textit{addPub} function in \textit{Town} object, Pub constructor for \textit{Pub} object and the \textit{FilteredPub} class. \par
+Changes  made in any of the lists \textit{pubCrawlList}, \textit{pubFilteredList}, \textit{pubList} can affect the other ones (e.g. the \textit{pubCrawlList} is a copy of the \textit{pubFilteredList} and the \textit{pubFilteredList} is a copy of the \textit{pubList}). \par
+When adding a component to an activity, check if everything still fits in the screen.
+
+\subsection{Physical Limitations Of The Program}
+The user's mobile has to be an Android device. It is advised that it has an API up to level 26.\par
+
+\subsection{Rebuilding And Testing}
+Everything has been saved in a GroupProject file. \par
+To rebuild a system a standard procedure for rebulding the system should be followed.\par
+When the program has completed running the tests the Run window will be opened and the information about passed and unpassed tests will be shown. \par
+
+\addcontentsline{toc}{section}{REFERENCES}
+\begin{thebibliography}{5}
+\bibitem{se.qa.03} \emph{Group 12 Software Engineering Group Project}
+Design Sepcification.
+E Kalisiak, K T Todd, J Kus, SE.12.DS 3 Release.
+\end{thebibliography}
+\addcontentsline{toc}{section}{DOCUMENT HISTORY}
+\section*{DOCUMENT HISTORY}
+\begin{tabular}{|l | l | l | l | l |}
+\hline
+Version & CCF No. & Date & Changes made to Document & Changed by \\
+\hline
+1 & N/A & 07/05/19 & Initial creation & EDK8, STT31, JAK55 \\
+\hline
+\end{tabular}
+\label{thelastpage}
+\end{document}

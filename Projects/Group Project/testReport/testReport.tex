@@ -1,0 +1,176 @@
+\documentclass{project}
+\usepackage[pdfauthor={N. W. Hardy},pdftitle={Software Engineering Group Project, LaTeX Document Example},pdftex]{hyperref}
+ \usepackage{longtable}
+\begin{document}
+\title{Group 12 Software Engineering Group Project}
+\subtitle{Project Test Report}
+\author{E Kalisiak, S MW Twerdochlib, K Todd}     
+\shorttitle{LaTeX}
+\version{1}
+\status{Release}
+\date{7th May 2019}
+\configref{SE.12.TR}
+\maketitle
+\raggedbottom
+\tableofcontents
+\newpage
+\section{INTRODUCTION}
+This document is to show how the project managed the tests laid out by us in line with SE.QA.06 and also the acceptance tests done by the client (Chris) so it meets the his expectaions and fill the cirteria nessasary. If the project does not pass the test then a paragraph will be written to explain why this might of happened. 
+
+\section{QUALITY ASSURANCE TESTS}
+These are the tests that are laid out in the Test Specification document and are used to test if certain criteria is met. 
+
+\subsection{Desktop QAT's}
+\begin{longtable}[c]{| p{1.6cm} | p{1cm} | p{5cm} |p{1cm} | p{5cm} | p{3.0cm} |}
+\caption{Desktop QAT's.\label{long}}\\
+\hline
+What We Are Testing & Code & Test Discription & Passed or Failed & Explanation/Description\\
+\hline
+Display a start screen & SE-F-001 &  When the software starts, it should display a start screen, and give the list creator the choice of starting a new pub list, or restoring a past pub list. & & \\
+\hline
+Start a new pub list & SE-F-002 & The user chooses to start a new pub list. & & \\
+\hline
+Start a new pub list options & SE-F-003 & when the user selects a pub list, it should be loaded, and the pubs that are in it should be displayed. & & \\
+\hline
+Duplicate town's & SE-F-006 & The solution should prevent the user from adding a pub to the list of pubs with the same name as a pub already in the list. & & \\
+\hline
+Able to create pubs & SE-F-007 & It should be possible to add a pub to the list of pubs if the name is not already taken.  & & \\
+\hline
+Delete pub & SE-F-008 & It should be possible to delete a pub from the list of pubs. & & \\
+\hline
+Blank Name & SE-F-009 & the solution should prevent the user from adding a pub to the list of pubs without a pub name inputted.& & \\
+\hline
+Blank Description & SE-F-010 & It should allow the user to not input any description of a pub.& & \\
+\hline
+Blank GPS &  SE-F-011 & It should allow the user to not input any GPS location for a pub.  & & \\
+\hline
+No Photo & SE-F-012 &  It should prevent the user from adding a pub without at least one photo. & & \\
+\hline
+No characteristics & SE-F-013 & It should allow the user to not input any characteristics for a pub.  & & \\
+\hline
+Error message & SE-F-014 & It should only display 1 error message if both a photo and a pub name aren’t inputted when adding a pub. & & \\
+\hline
+Not Image File & SE-F-015 & The solution should prevent files that aren’t image files from being inputted when adding a pub. & & \\
+\hline
+Select a pub for editing & SE-F-016 & The solution should be able to select a pub for editing its details  & & \\
+\hline
+Pub update & SE-F-017 & The solution should update the pubs with new details after editing. & & \\
+\hline
+Save a changed/new pub list & SE-F-018 & It should be possible to save a changed/new pub list & & \\
+\hline
+Cancel a changed/new pub list & SE-F-019 & It should be possible to cancel a changed/new pub list. & & \\
+\hline
+Displayed in a mobile system & SE-F-020 & The user chooses to package all of the details of a pub list so that they can be displayed in a mobile system. & & \\
+\hline
+\multicolumn{6}{| c |}{End of Table}\\
+\hline\hline
+\end{longtable}
+\pagebreak
+
+\subsection{Mobile QAT's}
+\begin{longtable}[c]{| p{1.6cm} | p{1cm} | p{5cm} |p{1cm} | p{5cm} | p{3.0cm} |}
+\caption{Mobile QAT's.\label{long}}\\
+\hline
+What We Are Testing & Code & Test Discription & Passed or Failed & Explanation/Description\\
+\hline
+Display pubs & SE-F-001 &  When the mobile system starts, it should display a list of pubs in a sensible order.  & Passed & It displays a list of towns, which will display a list of pubs. \\
+\hline
+Display pub list & SE-F-002 & When the user is shown a list of pub lists, then they should be able to chose one, and then have list of pubs displayed. & Passed & When a town is clicked the screen changes to display all the pubs in that town.\\
+\hline
+Filter pubs by any filter & SE-F-003 & When a list of pubs is shown, the user should be able to filter that list. The program can be told to display the pubs which conform to any of the filters. & Passed & When a filter button is clicked the user is sent to the filtering screen and then they are allowed to adjust the filtering appropriately and after clicking the button again they are send to the screen with filtered list of pubs. \\
+\hline
+Filter pubs by all filters & SE-F-004 & When a list of pubs is shown, the user should be able to filter that list. The program can be told to display only those pubs which obey ALL of the filter constraints. & Passed & When a filter button is clicked the user is sent to the filtering screen and then they are allowed to adjust the filtering appropriately and after clicking the button again they are send to the screen with filtered list of pubs.\\
+\hline
+Remove filter & SE-F-005 & The user should be able to remove a filter once it has been applied. & Passed & When the filter button is cilcked and then the cancel button is cliked it will cancel all changes made and go back to the full list of pubs.\\
+\hline
+Select pub & SE-F-006 & When a list of pubs is shown, the user should be able to select one of the pubs, and be shown all of its details. & Passed & When a button is clicked a new screen appears with all of the pub details.\\
+\hline
+Generate random list of pubs  & SE-F-007 & The user should be able to generate a random list of pubs from another list. Only pubs from that list should be returned.  & Passed & When the start random crawl button is clicked, then the user inputs the number of pubs they want to include in the crawl. Then when they click show full list button, it displays a list of random pubs of the designated amount.\\
+\hline
+Visited a pub  & SE-F-008 & A tick box should be displayed, which allows the user to indicate that they have visited a pub.  & Passed & When a checkbox is ticked, the pub disappears from the list. If the user is on the pub details screen and ticks the checkbox, it reloads the screen with the next pubs information.  \\
+\hline
+Congratulatory screen & SE-F-009 & When the user clicks on the tick box on the last pub, a congratulatory screen is shown. Then the user is returned to the home screen. The list of pubs is shown.  & Passed & When the last pub checkbox has been ticked, it returns to the list of pubs screen and a congratulory popup appears.\\
+\hline
+Wimp out of crawl  & SE-F-010 & The user should be able to stop the crawl early. & Passed & When the user clicks end crawl early, the screen changes to the list of pubs screen.\\
+\hline
+Ordered list from full list & SE-F-011 & The user should be able to make an ordered list of pubs from the full list. & Passed & When the start ordered crawl is clicked, it allows user to input a time for each pub. When the proceed button is clicked, it provides the user with a list of chosen pubs and their allocated times.\\
+\hline
+Ordered list from half list  & SE-F-012 & The user should be able to make an ordered list of pubs from a filtered list.  & Passed & When the start ordered crawl is clicked, it allows user to input a time for each pub. When the proceed button is clicked, it provides the user with a list of chosen pubs and their allocated times.\\
+\hline
+Time on pub  & SE-F-013 & The user should be able to put times against each pub.  & Passed & When the add button is pressed, the time popup shows, which allows the user to select a time.\\
+\hline
+Ordered by the time & SE-F-014 & The pub crawl is ordered by the time assigned to each pub.  & Passed & When the add button is clicked, it will automaticaly sort the list by time.\\
+\hline
+Completed the list & SE-F-015 & Having completed the list, they should be able to show the first pub and its time.   & Passed & After proceed and confirm buttons are clicked, the first item of the list is displayed with the time assigned to it.\\
+\hline
+Visited a pub pt2 & SE-F-016 & There should be a tick box which allows the user to indicate that they have visited a pub. & Passed & When a checkbox is ticked, the pub disappears from the list. If the user is on the pub details screen and ticks the checkbox, it reloads the screen with the next pubs information.  \\
+\hline
+Congratulatory screen pt2 & SE-F-017 & When the user clicks the tick box on the last pub, a congratulatory screen should pop up, and the home screen showing the list of pubs is displayed.  & Passed & When the last pub checkbox has been ticked, it returns to the list of pubs screen and a congratulory popup appears.\\
+\hline
+Wimp out of crawl pt2 & SE-F-018 &  The user should be able to stop the crawl early.  & Passed & When the user clicks end crawl early, the screen changes to the list of pubs screen.\\
+\hline
+\multicolumn{6}{| c |}{End of Table}\\
+\hline\hline
+\end{longtable}
+
+\pagebreak
+\section{CLIENT ACCEPTANCE TESTS}
+These are the tests done during the "hand over" so the project meets the clients needs and meets his expectations.
+
+\subsection{Desktop CAT's}
+\begin{longtable}[c]{| p{1.6cm} | p{1cm} | p{5cm} |p{1cm} | p{5cm} | p{3.0cm} |}
+\caption{Desktop CAT's.\label{long}}\\
+\hline
+What We Are Testing & Code & Test Discription & Passed or Failed & Explanation/Description \\
+\hline
+Making a new pub tour & FRD1, FRD2 & Start desktop system and make a new pub tour for Llanbadarn & & \\
+\hline
+Adding pubs & FRD5 & Add the Black Lion and the Llanbadarn Arms. Make the Black Lion to stock Real Ale and be Dog Friendly. Give other realistic details. & & \\
+\hline
+Exproting and saving & FRD6, FRD7 & Export new list to mobile (if separate action). Save and quit. Does the list export properly, showing the details that have been added (try filtering, viewing pubs)? & & \\
+\hline
+Adding and deleting pubs & FRD5, FRD4 & Delete the Gogerddan Arms. Change all the items to do with the Black Lion. Save and reload and see if all the changes took & & \\
+\hline
+\multicolumn{6}{| c |}{End of Table}\\
+\hline\hline
+\endlastfoot
+\end{longtable}
+
+
+\pagebreak
+\subsection{Mobile CAT's}
+\begin{longtable}[c]{| p{1.6cm} | p{1cm} | p{5cm} |p{1cm} | p{5cm} | p{3.0cm} |}
+\caption{Mobile CAT's.\label{long}}\\
+\hline
+What We Are Testing & Code & Test Discription & Passed or Failed & Explanation/Description \\
+\hline
+Starting Program & FRM1 & Start mobile system - either shows 15 pub list, or lets us load it and then shows it. & Passed & When the Aberystwyth button is clicked, it displays a list of 15 pubs in Aberystwyth. \\
+\hline 
+Filtering a list of pubs & FRM2 & Filter on dog friendly - does it give reduced set of pubs with at least 4 pubs (if not, try other filters). & Passed & When cash only filter is chosen and the filter button is clicked it displays a list of pubs fulfilling the chosen criteria.\\
+\hline 
+Selecting a pub & FRM3 &  From filtered list, choose second pub. Are details of that pub shown sensibly? & Passed & When the second pub in the filtered list it sensibly displays the pub information.\\
+\hline
+Random pub tour& FRM4 & From filtered list, make a random pub tour of 3 pubs. Do we get list of 3? Can we tick through it? Do we get congratulatory screen at the end? & Passed & When start random crawl button is clicked, the user can input 3 as a number of pubs he wants to include in the crawl. Then it displays a list of 3 random pubs from the filtered list and when they are all ticked off, the screen goes back to the full list of pubs screen. Finally the congratulory popup window appears.\\
+\hline
+Planned Pub Tour & FRM5 & From main list of 15 pubs. Make a planned pub tour of five pubs from the 1st, 4th, 7th, 15th and 2nd pubs. Time the visits at 7pm, 8:01pm, 9:11pm, 10pm, 11pm. Can we tick through them? & Passed  & When the user starts ordered crawl, they can input the appropriate times for appropriate pubs- five pubs from the 1st, 4th, 7th, 15th and 2nd pubs with times as follow 7pm, 8:01pm, 9:11pm, 10pm, 11pm. Then when the proceed and confirm button is clicked it allows the user to tick through the pubs.\\
+\hline
+Provided Data & FRM6 & Is the 15 pub example populated with good data about Aberystwyth? & Passed & All the data taken for pubs in Aberystwyth are accurate.\\
+\hline
+\multicolumn{6}{| c |}{End of Table}\\
+\hline\hline
+\endlastfoot
+\end{longtable}
+
+
+\pagebreak
+\addcontentsline{toc}{section}{DOCUMENT HISTORY}
+\section*{DOCUMENT HISTORY}
+\begin{tabular}{|l | l | l | l | l |}
+\hline
+Version & CCF No. & Date & Changes made to Document & Changed by \\
+\hline
+1 & N/A & 07/05/19 & Initial creation & EDK8, KTT1, STT31 \\
+\hline
+\end{tabular}
+\label{thelastpage}
+\end{document}

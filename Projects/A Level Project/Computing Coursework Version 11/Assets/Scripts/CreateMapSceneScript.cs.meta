@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: b485ecc282036924b91d5ee30a8d0325
+timeCreated: 1487022191
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - PlayerVision: {fileID: 1000011380463626, guid: c1af7b168942fef44b19eddbad58c3ad,
+      type: 2}
+  - PlayerPrefab: {fileID: 1000010460585138, guid: fe47bbf2d523e89429b25e13f80ba471,
+      type: 2}
+  - EnemyPrefab: {fileID: 1000013912466612, guid: 943174118eb70af40a72c92a85013e83,
+      type: 2}
+  - Wall: {fileID: 1000013802462550, guid: 81bcba0f387d68a47bca14d8b348c652, type: 2}
+  - InitialiseWall: {fileID: 1000011006312916, guid: f4030cd296f4cec459668f459198b0f2,
+      type: 2}
+  - InitialiseFloor: {fileID: 1000011372694622, guid: 5ec8c6bf9616439428c6b8447082863a,
+      type: 2}
+  - Floor: {fileID: 1000010902082678, guid: b472e9b08c9455043a87fce9aebec87a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

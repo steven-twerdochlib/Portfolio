@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListOfPubs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    android:gravity="left"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/filterButton"
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="goToFilterPubs"
+                    android:text="Filter" />
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="184dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:onClick="goToPubInfo"
+                        android:text="Pub 1" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 2" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 3" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Pub 4" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 5" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 6" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 7" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Pub 8" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 9" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 10" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 11" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Pub 12" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 13" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 14" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 15" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Pub 16" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 17" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 18" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 19" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Pub 20" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 21" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 22" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:text="Pub 23" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Pub 24" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,18 @@
+private void createLayoutDynamically(int n) {
+        for (int i = 0; i < n; i++) {
+            Button myButton = new Button(this);
+            myButton.setText("Button: "+i);
+            myButton.setId(i);
+            final int id_ = myButton.getId();
+
+            LinearLayout layout = (LinearLayout) findViewById(R.id.myDynamicLayout); //Had to make the id match the linearLayout id in the Main Layout
+            layout.addView(myButton);
+
+            myButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent goToListOfPubsActivity = new Intent(MainActivity.this, ListOfPubs.class);
+                    startActivity(goToListOfPubsActivity);
+                }
+            });
+        }
+    }
