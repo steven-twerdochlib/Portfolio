@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<head> 
-	<meta name="referrer" content="origin">
-    <title>Steven Twerdochlib's Portfolio</title>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel='stylesheet' href='style.css'><link rel="stylesheet" href="./style.css">
 	<style>
 body {
-	background-color: white;
 } 
 
 .dropbtn {
@@ -22,17 +23,17 @@ background-position:right bottom;
 	line-height: 4vw;
 	font-size: 2vw;
 	display: inline-block;
-	z-index: 999;
+	z-index: 500;
 }
 .dropdown {
 	position: relative;
 	text-align: center;
-	z-index: 999;
+	z-index: 500;
 }
 .dropdown-content {
     display: none;
     position: absolute;
-    z-index: 999;
+    z-index: 500;
 	height: 50px;
 }
 .dropdown-content a {
@@ -51,7 +52,7 @@ position: relative;
 	height: 4vw; 
 	line-height: auto;
 	font-size: 2vw;
-    z-index: 999;
+    z-index: 500;
 }
 .dropdown-content a:hover {background-position:left bottom; transition: all .8s ease-out; color: black;}
 .dropdown:hover .dropdown-content {display: block;}
@@ -59,7 +60,6 @@ position: relative;
 html {
   scroll-behavior: smooth;
 }
-
 /* Style the tab */
 .tab {
 text-align: center;
@@ -109,14 +109,13 @@ text-align: center;
 }
  
 * {box-sizing:border-box}
-
 /* Slideshow container */
- 
  
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
+text-align: center;
 }
 
 /* Next & previous buttons */
@@ -131,7 +130,14 @@ text-align: center;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0; 
+  background-color: black;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* Position the "next button" to the right */
@@ -142,7 +148,8 @@ text-align: center;
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+color: black;
+  background-color: rgba(255,255,255,0.8);
 }
 
 /* Caption text */
@@ -156,18 +163,19 @@ text-align: center;
   text-align: center;
 }
 .mySlides {
-  display:none;
+display:none;
+margin: 0 auto;
 }
 .active-slide {
   display:block;
+margin: 0 auto;
 }
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  font-size: 1vw;
+  padding: 1vw 1vw;
+  text-align: center;
 }
 
 /* The dots/bullets/indicators */
@@ -206,17 +214,22 @@ text-align: center;
 #sticky {
 position: sticky;
 top: 0;
-z-index: 3;
+z-index: 50;
 }
 * {
         margin: 0;
         padding: 0;
     }
+	
+
+	
 </style>
 </head>
-
-<body style="margin:0; padding:0; background-color: white;"> 
+<body>
+<!-- partial:index.partial.html -->
+<div id="initial-loader" class="padded"><span id="loader-text"></span></div>
 <div id="sticky">
+
 <table cellspacing="0" cellpadding="0" style="position: sticky; top:0; border-spacing: 0; color: white; background-color: black; margin:auto; padding:0; width: 100%; height: 1vw; white-space:nowrap; table-layout:fixed; z-index:3">
 	<tr>
 		<th style="width: 5%; border: solid; border-width: 0px 0px 0px 0px; border-color: #66ccff;">
@@ -266,7 +279,7 @@ z-index: 3;
 				<button class="dropbtn" onclick="location.href='index.html#TutorialsPage'" type="button"><b>Tutorials</b></button>
 			<div class="dropdown-content">
 				<a href="index.html#AndroidClickerGameTutorial"><b> Android Clicker Game Tutorial </b></a>
-				<a href="index.html#RobloxSimulatorTutorial"><b> Roblox Simulator Tutorial </b></a>
+				<a href="index.html#index.html#RobloxSimulatorTutorial"><b> Roblox Simulator Tutorial </b></a>
 				<a href="index.html#BasicAndroidGameTutorial"><b> Basic Android Game Tutorial </b></a>
 				
 			</div>
@@ -274,7 +287,7 @@ z-index: 3;
 		</td>
 		<td style="width: 23%;">
 			<div class="dropdown">
-				<button class="dropbtn" onclick="location.href='index.html#ContactPage'" type="button"><b>Contact</b></button>
+				<button class="dropbtn" onclick="location.href='index.html#ContactPage'"><b>Contact</b></button>
 			</div>
 		</td>
 		<th style="width: 5%; border: solid; border-width: 1px 0px 1px 0px; border-color: #66ccff;">
@@ -284,49 +297,44 @@ z-index: 3;
 </table>
 </div>
 
-<div style="z-index:-1; margin: 0; padding-left: 10%; padding-top: 8%; padding-bottom: 17%; text-align: left; font-size: 7vw; color: white; background-image: url('VR Background Image.jpeg'); background-repeat: no-repeat; background-size: 100% auto;">
-	<p style="margin: 0; text-align: left; font-size: 7vw; color: white;">
-	Steven <br>Twerdochlib's <br>Portfolio
-	</p>
-</div>
-<table style="background-color: black; margin:auto; padding:0; height: auto; width: 100%; white-space:nowrap;">
-	<tr style="height: 4vw; font-size: 1vw; color: white;">
-		<td colspan="7" style="text-align: center">
-			<p>Strong Experience With:</p>
-		</td>
-	</tr>
-	<tr>
-		<td style="width: 20%; text-align: center">
-		</td>
-		<td style="width: 12%; text-align: center">
-			<img src="Unity_Logo.png" alt="" border=3 style="width: 6vw; height: 6vw;"></img>
-		</td>
-		<td style="width: 12%; text-align: center">
-			<img src="android_studio_logo.jpg" alt="" border=3 style="width: 6vw; height: 6vw;"></img>
-		</td>
-		<td style="width: 12%; text-align: center">
-			<img src="C_Logo.png" alt="" border=3 style="width: 6vw; height: 6vw;"></img>
-		</td>
-		<td style="width: 12%; text-align: center;">
-			<img src="Java_Logo.jpg" alt="" border=3 style="width: 6vw; height: 6vw;"></img>
-		</td>
-		<td style="width: 12%; text-align: center">
-			<img src="HTML_CSS_Logo.jpg" alt="" border=3 style="width: 6vw; height: 6vw;"></img>
-		</td>
-		<td style="width: 20%; text-align: center">
-		</td>
-	</tr>
-	<tr style="height: 4vw;">
-	</tr>
-</table>
+<div id="main-body">
+<section id="page-structure" class="ajax">
+<header class="eliza black">
 
-<table style="background-color: black;">
+<table stlye="width: 100%">
 <tr>
 <td>
+      <p style="margin: 0; text-align: left; font-size: 7vw; color: white;">
+	Steven <br>Twerdochlib's <br>Portfolio
+	</p>
 
-     <table>
-       <tr>
-         <td>
+    <img id="image" src="VR Background Image.jpeg">
+
+</td>
+</tr>
+<tr>
+<td>
+      
+</td>
+</tr>
+  </table> 
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/CopyShader.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/03_glitch.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/EffectComposer.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/RenderPass.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/ShaderPass.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/MaskPass.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/08_texturepass.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/GlitchPass.js'></script><script  src="./script.js"></script>
+
+<table style="background-color: black;">
+    <tr>
+        <td>
            <p style="line-height: 5vw"> <br></p>
            <h1 style="text-align: center; margin:auto; padding:0; color: white; font-size: 5vw; height: auto; line-height: 5vw">About Me</h1>
            <p style="line-height: 5vw"> <br></p>
@@ -336,15 +344,15 @@ z-index: 3;
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Introduction')" id="defaultOpen">Introduction</button>
-  <button class="tablinks" onclick="openTab(event, 'My Hobbies')">My Hobbies/Interests</button>
+  <button class="tablinks" onclick="openTab(event, 'My Hobbies')">My Hobbies</button>
   <button class="tablinks" onclick="openTab(event, 'Personal Achievements')">Personal Achievements</button>
 </div>
 
 <div id="Introduction" class="tabcontent">
-  <h3 style="color: white; font-size: 2vw; text-align: center;">Introduction</h3>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
+  <h3 style="text-align: center;">Introduction</h3>
 <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">
-My name is Steven Twerdochlib, and I am an enthusiastic and eager to learn recent graduate who is now looking to extend my knowledge and experience. I have studied Bsc Computer Science at Aberystwyth University, where I received a 2.1 in my degree scheme. </p> 
+My name is Steven Twerdochlib, and I'm a recent Computer Science Bsc graduate from Aberystwyth University. 
+I have yet to recieve my results but am expecting a 2:1 in my degree scheme and I am currently looking for experience in a professional environment to expand upon my skills.</p> 
 <br />
 <p style="text-align: center; margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">
 <i>“If you can imagine it, you can achieve it. If you can dream it, you can become it”.<br /> ~ William Arthur Ward</i><br /></p> 
@@ -357,42 +365,14 @@ laws of physics to make or become anything we want and this is precisely why my 
 </div>
 
 <div id="My Hobbies" class="tabcontent">
-  <h3 style="color: white; font-size: 2vw; text-align: center;">My Hobbies/Interests</h3>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <ul style="margin:auto; padding:1vw; color: white; font-size: 1vw; height: auto; line-height: 1vw">
-  <li><b>Programming</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">I will occassionally work on some programming projects/tutorials in my spare time. At the moment my most anticipated project/tutorial to start is creating a beautiful 3D environment in Unity3D. From this I can add other features like a moveable 3D character but for now just learning to create beautiful scenary is what I am looking to do in the near future.<br /></p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <li><b>VR (Virtual Reality)</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">VR is one of my greatest interests, although I do not currently own a VR headset. I try to stay up-to-date with the current trends of VR hardware and software as well as the opinions on VR from the general public by accessing various websites and watching a variety of Youtube channels such as: ThrillSeeker, SteveKnows and Virtual Reality Oasis. I absolutely hope that one day in the future I can will have the chance to work on the creation of a VR game.<br /></p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <li><b>Gaming</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">A common pasttime for most people including myself is playing games, the game I play most freuqently is League of Legends. Playing games gives great insight into what makes games and their communities enjoyable as well as providing a great social activity for playing with friends.</p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <li><b>Drawing</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">Drawing is the least frequent hobby of mine but one I enjoy nonetheless. The most frequent type of drawings I do are anime drawings, I choose to do anime drawings because they tend to have the most simplistic tonal colour change but make up for it with their detailed shapes.</p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <li><b>Cross-stitching</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">Cross-stitching is a very uncommon hobby which is when a person creates patterns, using a needle and coloured threads, through a cross-stitching canvas to create an image which can then be made into a variety of objects such as; pictures and pillows. This hobby is particularly special to me because it provides me time to where I can do a peaceful pasttime while listening to something (I usually listen to an Audible book).</p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
- </ul>  
+  <h3 style="text-align: center;">My Hobbies</h3>
+  <p>Not inputted yet<br /></p>
 <p style="line-height: 20px"> <br></p>
 </div>
 
 <div id="Personal Achievements" class="tabcontent">
-  <h3 style="color: white; font-size: 2vw; text-align: center;">Personal Achievements</h3>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <ul style="margin:auto; padding:1vw; color: white; font-size: 1vw; height: auto; line-height: 1vw">
-  <li><b>UKIEPC Competition</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">I participated as part of a team from Aberystwyth University in the UKIEPC. UKIEPC is a programming competition with teams from each university competing to complete programming challenges correctly in the shortest amount of time.<br /></p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <li><b>Built my own PC</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">I built my own PC by purchasing the individual components such as; CPU, motherboard, PSU, PC case, RAM, GPU, etc... And combining these individual pieces of hardware to create a fully functional PC.<br /></p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
-  <li><b>Level 1 in British Sign Language (BSL)</b></li>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw">I have a Level 1 certificate in British Sign Language for completing a BSL course at Aberystwyth University.</p>
-  <p style="margin:auto; padding:0; color: white; font-size: 1vw; height: auto; line-height: 1vw"><br /></p>
- </ul>  
+  <h3 style="text-align: center;">Personal Achievements</h3>
+<p>Not inputted yet<br /></p>
 <p style="line-height: 20px"> <br></p>
 </div>
 
@@ -422,10 +402,9 @@ document.getElementById("defaultOpen").click();
          </td>
         </tr>
        </table>
-		
-    </td>
-  </tr>         
-</table>
-
-</body> 
-</html> 
+   
+  </header>
+</section>
+</div>
+</body>
+</html>
